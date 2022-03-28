@@ -8,6 +8,8 @@ let string = "sup"
 // declaration - let number = 5
 // assignment = number += 5
 
+// non-primitive - more complex types like objects, arrays, and functions
+
 let obj = { name: "utah utes" }
 let obj2 = { name: "utah utes" }
 // console.log(obj);
@@ -77,21 +79,24 @@ let dictionary = {
   sheep: '<img src="./assets/sheep.jpg" class="img-fluid" alt="">',
 }
 
-// a function parameters is a variable that the function takes in when defined
+// a function parameter is a variable that the function takes in when defined
 function cow() {
   // NOTE code small miss small
+  // grabbing entire HTML element for us to manipulate
   let animalElem = document.getElementById('animal')
   let saysElem = document.getElementById('says')
   let animalImg = document.getElementById('animal-image')
   console.log(animalElem, saysElem, animalImg);
+  // use innerHTML if you are injecting HTML code - use innerText if injecting plain text
   animalElem.innerText = "cow"
+  // setting a value INTO that HTML element
   saysElem.innerText = "ICKYICKYBUSEIHNSDFSEIHRFIOSDNFOSL"
+  // accessing our dictionary at the key 'cow' - using bracket notation for this. 
   animalImg.innerHTML = dictionary["cow"]
 }
 
-// animal and sound are 'banana' words - but we want to name them contextually to what the function is doing
+// animal and sound are 'banana' words  - but we want to name them in context to what they actually are
 function talkingAnimal(animal, sound) {
-  animalFeed++
   document.getElementById('animal').innerText = animal
   document.getElementById('says').innerText = sound
   document.getElementById('animal-image').innerHTML = dictionary[animal]
